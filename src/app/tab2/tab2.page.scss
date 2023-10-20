@@ -1,0 +1,33 @@
+/* Estilos adicionais podem ser personalizados aqui */
+
+ion-content {
+    --ion-background-color: transparent;
+  }
+  
+  ion-input {
+    font-size: 34px;
+    text-align: right;
+  }
+  
+  ion-button {
+    font-size: 24px;
+  }
+
+  
+  
+  ion-grid {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+  
+  ion-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .custom-button {
+    color: white;
+    --background: var(--ion-color-primary);
+  }
+  

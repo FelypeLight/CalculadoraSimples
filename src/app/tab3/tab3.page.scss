@@ -1,0 +1,18 @@
+/* Exemplo de estilo para a caixa de cor */
+.color-box {
+    width: 30px; /* Defina a largura desejada */
+    height: 30px; /* Defina a altura desejada */
+    border: 1px solid #000; /* Adicione uma borda opcional */
+  }.large-color-box {
+    --min-height: 200px; // Ajuste o tamanho aqui conforme necessário
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    .color-box {
+      width: var(--min-height);
+      height: var(--min-height);
+      border-radius: 8px;
+    }
+  }
+  

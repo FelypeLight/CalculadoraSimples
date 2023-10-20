@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Calculadora Científica
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Calculadora Científica</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+
+  <ion-card style="width: 400px; position: relative; left: 550px; background-color: grey; border: 5px solid black;">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <!-- Campo de entrada para a expressão -->
+        <ion-input [(ngModel)]="expression" placeholder="0" clearInput style="border: 2px solid grey; border-radius: 4px; background-color: white; border: 5px solid black;"></ion-input>
+      </ion-col>
+    </ion-row>
+    <!-- Adicione botões separados para cada número -->
+    <ion-row>
+      <ion-col size="4" *ngFor="let button of buttons">
+        <ion-button size="10" color="dark" shape="" fill="solid" (click)="addToExpression(button.value)" class="custom-button">{{ button.label }}</ion-button>
+      </ion-col>
+    </ion-row>
+    <!-- Botão "C" para apagar -->
+    <ion-row>
+      <ion-col size="4">
+        <ion-button size="10" color="dark" shape="" fill="solid" (click)="clear()" class="custom-button">C</ion-button>
+      </ion-col>
+      <!-- Botão para calcular -->
+      <ion-col class="buttonIgual" size="4">
+        <ion-button size="12" color="danger" shape="" fill="solid" (click)="calculate()" class="custom-button" >=</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+

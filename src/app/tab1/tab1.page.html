@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Calculadora Tabajara
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Calculadora Tabajara</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  
+
+  
+  <ion-card style="width: 600px; position: absolute; left: 470px; height: 600px; background-color: grey; border: 5px solid rgb(0, 0, 0);">
+    
+  
+    <ion-card-content style="color: white;">
+      <ion-card-header>
+        <ion-card-title style="border: 5px solid black; "> <ion-item >
+          <ion-input label="Insira o 1° número:" type="number" placeholder="00" [(ngModel)]="num1" ></ion-input>
+        </ion-item></ion-card-title>
+        <ion-card-subtitle style="border: 5px solid black;"><ion-item>
+          <ion-input label="Insira o 2° número:" type="number" placeholder="00" [(ngModel)]="num2"></ion-input>
+        </ion-item></ion-card-subtitle>
+      </ion-card-header>
+      <br><br><br><br>
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <ion-button size="large" fill="solid" color="dark" (click) ="adicao();">+</ion-button>
+        <ion-button size="large" fill="solid" color="dark" (click) = "subtracao();">-</ion-button>
+        <ion-button size="large" fill="solid" color="dark" (click) = "divisao();">/</ion-button>
+        <ion-button size="large" fill="solid" color="dark" (click) = "multiplicacao();">*</ion-button>
+        <ion-button size="large" fill="solid" color="dark" (click) = "seno();">seno</ion-button>
+      </div>
+        
+      
+      
+  <br><br><br><br><br>
+  <ion-input style="font-size: 35px; display: flex; justify-content: center; align-items: center;" label="Resultado: " type="text" [readonly]="true" [(ngModel)]="resultado" ></ion-input>
+
+  
+   
+
+  
+
+  
+
+ 
+
+  
+

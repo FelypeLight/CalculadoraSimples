@@ -1,0 +1,68 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Calculadora Programador
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-card style="width: 500px; height: 650px; color: white;  border: 5px solid black; position: relative; left: 550px;">
+  <ion-content [fullscreen]="true" >
+    <ion-header collapse="condense" style="background-color: grey;">
+      <ion-toolbar>
+        <ion-title size="large">Tab 3</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-list>
+      <!-- Campo de seleção para o valor de Vermelho (Red) -->
+      <ion-text color="tertiary" style="display: flex; justify-content: center; align-items: center; height: 80px;">
+        <h6><strong>Calculadora Programador</strong></h6>
+      </ion-text>
+      <ion-item style="border: 2px solid black; border-left: none; border-right: none;">
+        <ion-label position="floating" >Red</ion-label>
+        <ion-select [(ngModel)]="redValue" (ionChange)="updateBackgroundColor()">
+          <ion-select-option *ngFor="let value of redValues" [value]="value">{{ value }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    
+      <!-- Campo de seleção para o valor de Verde (Green) -->
+      <ion-item style="border: 2px solid black; border-left: none; border-right: none; border-top: none;">
+        <ion-label position="floating">Green</ion-label>
+        <ion-select [(ngModel)]="greenValue" (ionChange)="updateBackgroundColor()">
+          <ion-select-option *ngFor="let value of greenValues" [value]="value">{{ value }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    
+      <!-- Campo de seleção para o valor de Azul (Blue) -->
+      <ion-item style="border: 2px solid black; border-left: none; border-right: none; border-top: none;">
+        <ion-label position="floating">Blue</ion-label>
+        <ion-select [(ngModel)]="blueValue" (ionChange)="updateBackgroundColor()">
+          <ion-select-option *ngFor="let value of blueValues" [value]="value">{{ value }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    
+      <!-- Campo de seleção para opacidade -->
+      <ion-item style="border: 2px solid black; border-left: none; border-right: none; border-top: none;">
+        <ion-label position="floating">Opacidade</ion-label>
+        <ion-select [(ngModel)]="opacityValue" (ionChange)="updateBackgroundColor()">
+          <ion-select-option value="0.1">10%</ion-select-option>
+          <ion-select-option value="0.2">20%</ion-select-option>
+          <ion-select-option value="0.3">30%</ion-select-option>
+          <ion-select-option value="0.5">50%</ion-select-option>
+          <ion-select-option value="0.7">70%</ion-select-option>
+          <ion-select-option value="0.85">85%</ion-select-option>
+          <ion-select-option value="1">100%</ion-select-option>
+        </ion-select>
+      </ion-item>
+    
+      <!-- Elemento com cor de fundo atualizada com base nas seleções -->
+       
+      <ion-item class="large-color-box">
+        <ion-label position="floating">Cor Atual</ion-label>
+        <div class="color-box" [style.background-color]="backgroundColor"></div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-card>
+
